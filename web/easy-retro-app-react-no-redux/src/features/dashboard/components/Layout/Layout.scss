@@ -1,0 +1,13 @@
+@import 'src/assets/styles/colors.scss';
+
+.layout-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-body {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}

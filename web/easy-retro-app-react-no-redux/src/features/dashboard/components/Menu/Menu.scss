@@ -1,0 +1,26 @@
+@import 'src/assets/styles/colors.scss';
+
+.menu-container {
+  width: 200px;
+  background-color: $light-orange-2;
+  border-right: 2px solid $orange;
+
+  .menu-item-container {
+    padding: 24px;
+
+    .menu-item {
+      height: 50px;
+      border-radius: 8px;
+      border: 2px solid $orange;
+      cursor: pointer;
+    }
+  }
+}
+
+.background-white {
+  background-color: $white;
+}
+
+.background-light-orange-3 {
+  background-color: $light-orange-3;
+}

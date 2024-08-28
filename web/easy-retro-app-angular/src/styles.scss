@@ -1,0 +1,55 @@
+@import 'colors';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.start {
+  border: 1px solid $start;
+}
+
+.continue {
+  border: 1px solid $continue;
+}
+
+.stop {
+  border: 1px solid $stop;
+}
+
+.best-story {
+  border: 1px solid $best-story;
+}
+
+.most-annoying-story {
+  border: 1px solid $most-annoying-story;
+}
+
+.most-technically-complex-story {
+  border: 1px solid $most-technically-complex-story;
+}
+
+.most-exciting-story {
+  border: 1px solid $most-exciting-story;
+}
+
+.column-title {
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-east-asian: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-size: 20px;
+  line-height: 32px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  letter-spacing: normal;
+  color: $primary-blue;
+}
+
+.bold-text {
+  font-weight: 500;
+}
+
+.not-allowed {
+  pointer-events: none;
+}

@@ -1,0 +1,5 @@
+<div class="grid-container">
+    <app-retro-column [title]="'Početi'" [retroItems]="allItems[0]" [type]="'start'" (changedItemType)="changeItemType($event)"></app-retro-column>
+    <app-retro-column [title]="'Nastaviti'" [retroItems]="allItems[1]" [type]="'continue'" (changedItemType)="changeItemType($event)"></app-retro-column>
+    <app-retro-column [title]="'Prestati'" [retroItems]="allItems[2]" [type]="'stop'" (changedItemType)="changeItemType($event)"></app-retro-column>
+</div>

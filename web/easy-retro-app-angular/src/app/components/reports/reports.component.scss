@@ -1,0 +1,61 @@
+@import 'mixins';
+
+.container {
+  background: url('/assets/images/success-illustration.png');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+
+  .sprint-select {
+    height: 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      margin-right: 20px;
+      margin-top: 10px;
+    }
+
+    div {
+      display: flex;
+    }
+  }
+
+  .create-button {
+    height: 40px;
+    margin-top: 5px;
+  }
+
+  .content-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+
+    .content {
+      max-width: 600px;
+      min-width: 600px;
+      min-height: 200px;
+      height: auto;
+      border-radius: 20px;
+      border: 1px solid plum;
+      background-color: aliceblue;
+      padding: 30px;
+
+      .column-title {
+        display: flex;
+        justify-content: center;
+        color: plum;
+      }
+
+      .report {
+        @include center-content;
+        height: 100%;
+      }
+    }
+  }
+}
+
+mat-form-field {
+  width: 50px !important;
+}

@@ -1,0 +1,47 @@
+
+<div class="container" [ngClass]="{ 'background-image': !allItems }">
+  <div class="sprint-select">
+    <div>
+      <p class="column-title">Odaberite sprint:</p>
+      <mat-form-field >
+        <mat-select [formControl]="selectedSprint" (selectionChange)="onSelectSprint($event.value)">
+          <mat-option *ngFor="let sprint of sprints" [value]="sprint">
+            {{ sprint }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="primary" class="create-button" (click)="createNewCompetition()">Kreiraj za novi sprint</button>
+  </div>
+  <div *ngIf="allItems" class="content">
+    <app-retro-column 
+      [title]="'Najbolja'" 
+      [retroItems]="allItems[0]" 
+      [type]="'best-story'" 
+      [selectedSprint]="selectedSprint.value"
+      [sprint]="sprint">
+    </app-retro-column>
+    <app-retro-column 
+      [title]="'Najiritantnija'" 
+      [retroItems]="allItems[1]" 
+      [type]="'most-annoying-story'" 
+      [selectedSprint]="selectedSprint.value"
+      [sprint]="sprint">
+    </app-retro-column>
+    <app-retro-column 
+      [title]="'Najkompleksnija'" 
+      [retroItems]="allItems[2]" 
+      [type]="'most-technically-complex-story'" 
+      [selectedSprint]="selectedSprint.value"
+      [sprint]="sprint">
+    </app-retro-column>
+    <app-retro-column 
+      [title]="'Najuzbudljivija'" 
+      [retroItems]="allItems[3]" 
+      [type]="'most-exciting-story'" 
+      [selectedSprint]="selectedSprint.value"
+      [sprint]="sprint">
+    </app-retro-column>
+  </div>
+  <button *ngIf="sprint !== -1" mat-button color="primary" class="create-button end" (click)="finishCreating()">Završi</button>
+</div>

@@ -1,0 +1,41 @@
+%icon {
+  background-size: contain;
+  display: inline-block;
+  mask-repeat: no-repeat;
+}
+
+@mixin easy-retro-icon($width, $height, $icon-title, $icon-position-x, $icon-position-y) {
+  background: url("/assets/images/" + $icon-title + ".svg") $icon-position-x $icon-position-y/contain no-repeat;
+  width: $width;
+  height: $height;
+}
+
+.arrow-down {
+  @extend %icon;
+  @include easy-retro-icon(24px, 24px, "arrow-down", center, center);
+}
+
+.arrow-up {
+  @extend %icon;
+  @include easy-retro-icon(24px, 24px, "arrow-up", center, center);
+}
+
+.no-data {
+  @extend %icon;
+  @include easy-retro-icon(200px, 200px, "no-data", center, center);
+}
+
+.like {
+  @extend %icon;
+  @include easy-retro-icon(24px, 24px, "like", center, center);
+}
+
+.dislike {
+  @extend %icon;
+  @include easy-retro-icon(24px, 24px, "dislike", center, center);
+}
+
+.delete-icon {
+  @extend %icon;
+  @include easy-retro-icon(24px, 24px, "delete", center, center);
+}

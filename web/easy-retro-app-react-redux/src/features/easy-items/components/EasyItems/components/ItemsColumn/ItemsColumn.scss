@@ -1,0 +1,32 @@
+@import 'src/assets/styles/colors.scss';
+
+.column-container {
+  width: 33%;
+  border: 1px solid $orange;
+
+  .column-title {
+    height: 50px;
+    border-bottom: 1px solid $orange;
+  }
+
+  .items-container {
+    box-sizing: border-box;
+  }
+
+}
+
+.yellow-bg {
+  background-color: $yellow;
+}
+
+.red-bg {
+  background-color: $red;
+}
+
+.green-bg {
+  background-color: $green;
+}
+
+.column-container.highlight {
+  background-color: rgba(0, 0, 0, 0.1);
+}

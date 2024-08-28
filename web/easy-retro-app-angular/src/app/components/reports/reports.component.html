@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="sprint-select">
+    <div>
+      <p class="column-title">Odaberite sprint:</p>
+      <mat-form-field >
+        <mat-select [formControl]="selectedSprint" (selectionChange)="onSelectSprint($event.value)">
+          <mat-option *ngFor="let sprint of sprints" [value]="sprint">
+            {{ sprint }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="primary" class="create-button" (click)="createNewReport()">Kreiraj za novi sprint</button>
+  </div>
+  <div *ngIf="selectedSprint.value !== -1" class="content-container">
+    <div class="content">
+      <div class="column-title">
+        <span>Izvještaj sa retrospektive za sprint {{ report.sprint }}</span>
+      </div>
+      <div class="report">
+        <span>{{ report.text }}</span>
+      </div>
+    </div>
+  </div>
+</div>

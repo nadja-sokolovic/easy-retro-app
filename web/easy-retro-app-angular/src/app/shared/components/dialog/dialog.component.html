@@ -1,0 +1,16 @@
+<div class="confirm-dialog-container">
+  <div class="content-container">
+    <span class="content-span full-width">{{data.message}}</span>
+    <div class="radio-buttons">
+      <mat-radio-group *ngIf="data.showCategories" [(ngModel)]="selectedType">
+        <mat-radio-button *ngFor="let category of data.categories" [value]="category" [color]="'primary'">{{ category }}</mat-radio-button>
+      </mat-radio-group>
+      <mat-form-field *ngIf="data.showInputField">
+        <mat-label>Sprint</mat-label>
+        <input matInput type="number" [(ngModel)]="sprint">
+      </mat-form-field>            
+    </div>
+  </div>
+  <button mat-button id="no-button" [mat-dialog-close]="false">Odustani</button>
+  <button mat-raised-button color="primary" id="yes-button" [mat-dialog-close]="getCloseValue()">Potvrdi</button>
+</div>

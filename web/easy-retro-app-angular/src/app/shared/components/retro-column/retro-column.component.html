@@ -1,0 +1,22 @@
+<div class="column-container">
+  <div class="title">
+    <span class="column-title">{{ title }}</span>
+    <button *ngIf="isFirstCategory()" mat-stroked-button color="primary" (click)="addNewItem()">Dodaj novu stavku</button>
+  </div>
+  <div class="content">
+    <div *ngFor="let retroItem of retroItems; index as i">
+      <div *ngIf="i > 0" class="gap"></div>
+      <app-retro-item
+        [retroItem]="retroItem"
+        [selectedSprint]="selectedSprint"
+        [sprint]="sprint"
+        (deletedItem)="removeItemFromList($event)"
+        (changedItem)="moveItemToAnotherList($event)">
+      </app-retro-item>
+    </div>
+    <div *ngIf="retroItems.length === 0" class="empty-screen">
+        <p *ngIf="!isFirstCategory()">Nema pobjednika u ovoj kategoriji.</p>
+        <p *ngIf="isFirstCategory()">Nema dostupnih stavki.</p>
+    </div>
+  </div>
+</div>

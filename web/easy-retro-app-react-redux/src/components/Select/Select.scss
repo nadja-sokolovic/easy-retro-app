@@ -1,0 +1,43 @@
+@import 'src/assets/styles/colors.scss';
+
+.select-wrapper {
+  position: relative; /* Parent container with relative positioning */
+}
+
+.select-container {
+  cursor: pointer;
+  border: 1px solid $white;
+  border-radius: 8px;
+  margin-left: 8px;
+
+  .label-container {
+    padding: 12px 16px;
+  }
+
+  .arrow-container {
+    background-color: $light-orange;
+    align-self: stretch; /* Stretch to fit full height */
+    padding: 0 6px;
+    border-radius: 0 8px 8px 0;
+  }
+}
+
+.select-values-container {
+  position: absolute; /* Absolute positioning */
+  top: 100%; /* Position it below the select-container */
+  right: 0; /* Align to the right of select-container */
+  background-color: $white;
+  border: 1px solid $light-orange;
+  border-radius: 8px;
+  margin-top: 4px; /* Optional: Add some margin for spacing */
+  padding: 12px;
+
+  .select-value {
+    &:hover {
+      cursor: pointer;
+      font-weight: 800;
+      background-color: $light-orange-2;
+    }
+  }
+}
+

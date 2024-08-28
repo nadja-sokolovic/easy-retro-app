@@ -1,0 +1,79 @@
+@import 'colors';
+@import 'mixins';
+
+.container {
+  min-height: 50px;
+  background-color: $item-background;
+  border-radius: 10px;
+  padding: 5px;
+
+  .retro-item {
+    display: flex;
+    justify-content: space-between;
+  
+    .item-content {
+      @include center-content;
+      display: block;
+      border-bottom: 10px;
+
+      &.width-100 {
+        min-width: 100%;
+      }
+
+      &.width-80 {
+        min-width: 80%;
+      }
+    }
+  
+    .item-actions {
+      flex-direction: row;
+  
+      .icon {
+        cursor: pointer;
+  
+        &.delete {
+          color: $stop;
+        }
+      }
+    }
+  }
+}
+
+.buttons {
+  @include center-content;
+  flex-direction: row;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  outline: none !important;
+}
+
+.reaction-icons {
+  font-size: 15px;
+  cursor: pointer;
+
+  span {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+.width-100 {
+  width: 100%;
+}
+
+mat-form-field {
+  width: 100% !important;
+  margin-top: 10px;
+
+  mat-form-field-wrapper {
+    padding: 5px !important;
+  }
+
+  textarea {
+    min-height: auto !important;
+  }
+}
+

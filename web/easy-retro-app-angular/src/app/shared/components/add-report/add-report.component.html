@@ -1,0 +1,48 @@
+<div class="page">
+    <mat-card class="mat-elevation-z12">
+      <mat-card-header>
+        <mat-card-title style="text-align: center">
+          {{ "Kreiranje novog izvještaja" }}
+        </mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <form [formGroup]="formGroup">
+          <mat-form-field apperance="fill">
+            <mat-label>Sprint</mat-label>
+            <input
+              matInput
+              required
+              type="number"
+              formControlName="sprint"
+            />
+            <mat-error *ngIf="formGroup.get('sprint')?.errors?.required"
+              >Ovo polje je obavezno</mat-error
+            >
+          </mat-form-field>
+          <mat-form-field apperance="fill">
+            <mat-label>Tekst</mat-label>
+            <textarea 
+              matInput 
+              formControlName="text">
+            </textarea>
+            <mat-error *ngIf="formGroup.get('text')?.errors?.required"
+              >Ovo polje je obavezno</mat-error
+            >
+          </mat-form-field>
+  
+          <div class="button-row">
+            <button mat-button color="warn" (click)="onClose()" id="button">
+              Odustani
+            </button>
+            <button  [disabled]="!formGroup.valid" mat-raised-button color="primary" id="button" (click)="onSubmit()">
+              <div class="button-content">
+                Potvrdi
+              </div>
+            </button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+

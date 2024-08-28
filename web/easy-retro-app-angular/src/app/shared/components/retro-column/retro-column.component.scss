@@ -1,0 +1,46 @@
+@import 'colors';
+@import 'mixins';
+
+.column-container {
+  width: 100%;
+  height: 100%;
+
+  .title {
+    @include center-content;
+    border: 1px solid $primary-blue;
+    background-color: aliceblue;
+    display: flex;
+    padding: 5px;
+
+    .column-title {
+      max-width: 80%;
+    }
+  }
+
+  .content {
+    height: calc(100% - 70px);
+    border: 1px solid $primary-blue;
+    padding: 20px;
+  }
+}
+
+.gap {
+  height: 10px;
+}
+
+.empty-screen {
+  margin-top: 61px;
+  text-align: center;
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    color: $primary-blue;
+    margin-bottom: 40px;
+
+    &:first-child {
+      margin-bottom: 12px;
+    }
+  }
+
+}

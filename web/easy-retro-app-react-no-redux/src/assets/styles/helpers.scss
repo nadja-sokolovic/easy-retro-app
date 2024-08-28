@@ -1,0 +1,95 @@
+// grid 
+.fx-direction-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fx-direction-center {
+  display: flex;
+  justify-content: center;
+}
+
+.fx-direction-end {
+  display: flex;
+  justify-content: end;
+}
+
+.fx-direction-start {
+  display: flex;
+  justify-content: start;
+}
+
+.fx-direction-column-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.fx-direction-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-start {
+  align-items: start;
+}
+
+// dimensions
+.w-100-p {
+  width: 100%;
+}
+
+.w-50-p {
+  width: 50%;
+}
+
+.h-100-p {
+  height: 100%;
+}
+
+// margins
+.mb-12 {
+  margin-bottom: 12px;
+}
+
+.ml-12 {
+  margin-left: 12px;
+}
+
+.mt-24 {
+  margin-top: 24px;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+// paddings 
+.p-12 {
+  padding: 12px;
+}
+
+// cursor
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// forms
+.form-container {
+  margin-top: 20px;
+  width: 200px;
+}
+
+input {
+  height: 30px;
+}
+
+// background 
+.background-orange {
+  background-color: $orange;
+}

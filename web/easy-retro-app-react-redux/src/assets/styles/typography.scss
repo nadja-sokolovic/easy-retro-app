@@ -1,0 +1,52 @@
+@import './colors.scss';
+
+label {
+  font-family: 'Roboto', sans-serif;
+}
+
+// colors
+.white {
+  color: $white;
+}
+
+.orange {
+  color: $orange;
+}
+
+.light-red {
+  color: $red;
+}
+
+.gray {
+  color: $dark-gray;
+}
+
+// font weight
+.w-800 {
+  font-weight: 800;
+}
+
+.w-500 {
+  font-weight: 500;
+}
+
+// font size
+.fs-24 {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.fs-20 {
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.fs-16 {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+// text transform
+.text-uppercase {
+  text-transform: uppercase;
+}

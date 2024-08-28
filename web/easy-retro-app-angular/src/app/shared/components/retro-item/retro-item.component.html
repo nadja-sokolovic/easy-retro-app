@@ -1,0 +1,40 @@
+<div *ngIf="retroItem !== defaultItem" class="container" [ngClass]="retroItem.type">
+  <div class="retro-item">
+    <div [ngClass]="isFirstCategory() ? 'item-content width-80' : 'item-content width-100'">
+      <form [formGroup]="editItemForm" (ngSubmit)="onSubmit()">
+          <input 
+            style="min-width: 100%;"
+            [placeholder]="placeholder.text"
+            [readonly]="!editable" 
+            formControlName="text"
+            [ngClass]="{ 'not-allowed': preventEditingForPreviousSprints() }"
+            (click)="onClick($event, retroItem.itemId)">
+          <mat-form-field *ngIf="!isFirstCategory()">
+            <mat-label>Opis korisničke priče</mat-label>
+            <textarea 
+              matInput 
+              [placeholder]="placeholder.description"
+              [readonly]="!editable" 
+              formControlName="description"
+              [ngClass]="{ 'not-allowed': preventEditingForPreviousSprints() }"
+              (click)="onClick($event, retroItem.itemId)">
+            </textarea>
+          </mat-form-field>
+      </form>
+    </div>
+    <div class="item-actions" *ngIf="isFirstCategory()">
+      <mat-icon class="icon" (click)="onChangeItemType(retroItem)">launch</mat-icon>
+      <mat-icon class="icon delete" (click)="onDeleteItem(retroItem.itemId)">delete_outline</mat-icon>
+    </div>
+  </div>
+  <div class="buttons">
+    <button *ngIf="editable" mat-button color="primary" (click)="onSaveAction(retroItem)">Sačuvaj izmjene</button>
+    <button *ngIf="editable" mat-button color="primary" (click)="onCancelEditing()">Odustani</button>
+  </div>
+  <div *ngIf="!editable && isFirstCategory()" class="reaction-icons">
+    <mat-icon [inline]="true" color="primary" (click)="addReaction(retroItem.itemId, 'like')">thumb_up</mat-icon>
+    <span>{{ retroItem.reactions.likeCount }}</span>
+    <mat-icon [inline]="true" color="primary" (click)="addReaction(retroItem.itemId, 'dislike')">thumb_down</mat-icon>
+    <span>{{ retroItem.reactions.dislikeCount }}</span>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+@import 'src/assets/styles/colors.scss';
+
+.item-container {
+  background-color: $white;
+  border-radius: 8px;
+  border: 2px solid $orange;
+  text-align: left;
+}
